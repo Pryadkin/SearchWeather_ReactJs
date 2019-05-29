@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[url=https://flic.kr/p/2g5cyYJ][img]https://live.staticflickr.com/65535/47961567218_22650ded07_b.jpg[/img][/url][url=https://flic.kr/p/2g5cyYJ]Screenshot_6[/url] by [url=https://www.flickr.com/photos/142193526@N02/]Антон Прядкин[/url], on Flickr
+
 ## Available Scripts
 
 In the project directory, you can run:
