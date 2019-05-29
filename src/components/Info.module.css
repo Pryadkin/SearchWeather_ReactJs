@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+.Info {
+    margin: 20px auto;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(154, 208, 251);
+    font-family: 'Poiret One', cursive;
+}
+
+
+
+@media all and (max-width: 1150px) {
+    .Info {
+      font-size: 12px;      
+    }  
+  }
+  /* @media all and (max-width: 750px) {
+    .Info {
+        font-size: 10px;       
+    }  
+  } */

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+span {
+    font-family: 'Poiret One', cursive; 
+    padding-left: 10px;
+    color: #9AD0FB;
+}
+hr {
+    margin-top: 0;
+}
+.Weather {
+    height: 70%;
+}
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;    
+    color: white;
+    margin: 10px auto 0;
+}
+.city img {
+    padding-left: 20px;
+    vertical-align: middle;
+}
+.city h1 {
+    font-size: 30px;
+    line-height: 50px;
+    padding-bottom: 10px;
+}
+.dataWeather {
+    margin-left: 30px;
+    height: 80%;
+    width: 100%;
+    font-family: 'Poiret One', cursive; 
+    color: white;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;   
+    flex-wrap: wrap; 
+}
+
+
+@media all and (max-width: 1300px) {
+    .dataWeather {
+        font-size: 20px;        
+    }  
+    .city {
+        margin: 0;
+        padding: 0;
+    }
+}
+@media all and (max-width: 1150px) {
+    .dataWeather {
+        font-size: 18px;        
+    }  
+    .city {
+        margin: 0;
+        padding: 0;
+    }
+}
+/* @media all and (max-width: 500px) {
+    .dataWeather {
+        font-size: 16px;
+    }  
+}
+@media all and (max-width: 350px) {
+    .dataWeather {
+        font-size: 14px;
+    }  
+} */

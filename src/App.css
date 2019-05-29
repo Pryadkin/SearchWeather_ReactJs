@@ -1,0 +1,32 @@
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  height: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #504668;
+  box-shadow: 5px 5px 5px black;
+}
+
+@media all and (max-width: 1150px) {
+  .App {
+    width: 30%;
+    height: 60%;
+  }  
+}
+@media all and (max-width: 1000px) {
+  .App {
+    min-width: 300px;
+    min-height: 550px;
+  }  
+}
