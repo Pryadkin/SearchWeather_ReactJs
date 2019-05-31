@@ -4,6 +4,7 @@ import Info from "./components/Info";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 import Error from './components/Error';
+import Preloader from './components/Preloader';
 
 const API_KEY = '74dc053fe8d480bd7da8597c42f677db';
 
@@ -18,34 +19,22 @@ class App extends React.Component {
       sunset: undefined,
       weather: undefined,
       weatherIcon: undefined,
-      error: false
+      error: false,
+      preloader: true
    }   
+   
+   componentDidMount() {           
+      this.setWeatherData()  
+      this.preloader()      
+   }
 
-  componentDidMount() {
-     this.setWeatherData()
-   //   this.sayHi()
-  }
-
-   // sayHi = (e) => {
-
-   //    if ( this.state.city === undefined && e === undefined ) {
-   //       this.setState({
-   //          city: 'Moscow'
-   //       })
-   //    } else {
-   //       e.preventDefault()
-   //       this.setState({
-   //          city: 'London',
-   //          temp: 23,         
-   //          country: 'RU',
-   //          pressure: '765 мм. рт. ст.',
-   //          sunrise: '03:56',
-   //          sunset: '20:56',
-   //          weather: 'clear',
-   //          error: true
-   //       });  
-   //    }
-   // }
+   preloader() {
+      setTimeout(() => {
+         this.setState({
+            preloader: false
+         })
+      }, 1000)
+   }
 
    setWeatherData = (e) => {
       let city;
@@ -59,10 +48,10 @@ class App extends React.Component {
             
       this.getURL(`https://ru.api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
       .then(data => this.setData(data))
-      .catch(this.error);
+      .catch(this.onError);
    }
 
-   error = () => {
+   onError = () => {
       this.setState({
          error: true
       })
@@ -80,8 +69,7 @@ class App extends React.Component {
       if (num < 10) {
          return `0${num}`
       } return num;
-   } 
-   
+   }    
 
    setData = (data) => {
       const
@@ -105,11 +93,12 @@ class App extends React.Component {
          weather: weather,
          weatherIcon: `http://openweathermap.org/img/w/${data.weather[0].icon}.png`,
          error: false
-      });        
-   }
+      }); 
+   }  
 
-
-   render() {
+   render() {          
+      let preloader = <Preloader preloader={this.state.preloader}/>          
+   
       let weather;
       if ( !this.state.error ) {
          weather = <Weather 
@@ -128,10 +117,13 @@ class App extends React.Component {
       };        
 
       return (
-         <div className='App'> 
-            <Info />
-            <Form setWeatherData={this.setWeatherData} />     
-            {weather}     
+         <div>
+            {preloader}
+            <div className='App'> 
+               <Info />
+               <Form setWeatherData={this.setWeatherData} />     
+               {weather}               
+            </div>
          </div>
       )
    }

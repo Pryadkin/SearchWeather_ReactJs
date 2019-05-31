@@ -16,6 +16,7 @@ h2 {
   right: 0;
   background-color: #504668;
   box-shadow: 5px 5px 5px black;
+  transition: 0.5s;
 }
 
 @media all and (max-width: 1150px) {

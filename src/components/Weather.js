@@ -3,6 +3,14 @@ import classes from './Weather.module.css';
 
 
 const Weather = props => {
+// class Weather extends React.Comment {
+    const img = document.images;
+   
+    // getPreloader() {
+    //     alert('hey')
+    // }
+    
+    
     return(
         <div className={classes.Weather}>  
             <div className={classes.city} >
@@ -20,6 +28,7 @@ const Weather = props => {
         </div>
     )
 }
+
 
 
 export default Weather;

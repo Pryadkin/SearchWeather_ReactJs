@@ -10,6 +10,7 @@ const Form = props => {
 
             <datalist id='cities'>
                 <option value='Moscow'></option>
+                <option value='Saint Petersburg'></option>
                 <option value='Samara'></option>
                 <option value='London'></option>
                 <option value='New York'></option>
