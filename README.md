@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Иллюстрация к проекту](SearchWeather_ReactJs.png)
+![Иллюстрация к проекту](Weather_ReactJs.png)
 
 ## Available Scripts
 
